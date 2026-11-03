@@ -1,18 +1,386 @@
-<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ROUTE IT — WORKFLOW 2030</title><style>
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap');*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top right,#004e5055,transparent 50%),repeating-linear-gradient(0deg,transparent 0 39px,#00d6c60a 40px),repeating-linear-gradient(90deg,transparent 0 39px,#00d6c60a 40px),#050b13;color:#f2faff;font-family:Cairo,Arial,sans-serif}main{max-width:1450px;margin:auto;padding:24px}.top{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #36525d;padding-bottom:12px}.logos{display:flex;gap:12px}.logos img{height:60px;width:85px;object-fit:contain}.ey{color:#00d6c6;letter-spacing:2px;font-size:13px;font-weight:800}.hero{margin:24px 0}.hero h1{font-size:clamp(32px,5vw,62px);margin:0}.muted{color:#a8b5cc}.cols{display:grid;grid-template-columns:1fr 1.15fr;gap:18px}.panel{background:#ffffff09;border:1px solid #00d6c65c;border-radius:18px;padding:22px}.panel h2{margin:0 0 12px;font-size:23px}.policy{line-height:2.2;padding-right:24px}.policy li{margin-bottom:10px}.rule{border-bottom:1px solid #ffffff20;padding:11px 0}.rule:last-child{border:0}.rule b{display:block;margin-bottom:8px}.choices{display:flex;flex-wrap:wrap;gap:7px}button{font:700 14px Cairo,Arial;cursor:pointer;min-height:46px;border-radius:12px;padding:9px 13px;background:#ffffff0b;border:1px solid #91acb055;color:#f2faff}button:hover{border-color:#00d6c6}button.selected{border:2px solid #00d6c6;background:#00d6c630}.primary{background:linear-gradient(110deg,#00d6c6,#00e5ff);color:#03252a;border:0;font-size:17px;padding:12px 25px}.toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:18px}.clock{font-size:27px;font-weight:900;color:#00e5ff}.hidden{display:none}.intro{max-width:750px;margin:50px auto;line-height:2}.intro h2{font-size:31px}.card{border:1px solid #6a89904f;border-radius:16px;background:#ffffff08;padding:17px;margin:13px 0}.card.good{border-color:#3ee07f}.card.bad{border-color:#ff5c7a}.cardtop{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}.card h3{margin:0}.flow{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin:16px 0}.node{border:1px solid #00d6c66e;background:#00d6c615;border-radius:11px;padding:9px 12px;font-size:13px;font-weight:700}.node.bad{border:2px solid #ff5c7a;color:#ffd9e2}.arrow{color:#00e5ff}.reason{color:#ff9bb1;font-size:14px}.good .reason{color:#9affc7}.score{font-size:48px;color:#00e5ff;font-weight:900}.bar{height:8px;background:#ffffff20;border-radius:20px;overflow:hidden}.bar div{height:100%;background:#00d6c6}.foot{text-align:center;color:#8ea1b7;font-size:12px;margin:30px 0}@media(max-width:850px){main{padding:12px}.cols{grid-template-columns:1fr}.panel{padding:15px}.logos img{height:45px;width:60px}}
-</style></head><body><main><header class="top"><div class="logos"><img src="deanship.png" alt="شعار العمادة"><img src="club.png" alt="شعار النادي"></div><div class="ey" dir="ltr">OFFICE TECH 2030 · ZONE 03 / 06</div></header><div class="hero"><div class="ey" dir="ltr">WORKFLOW 2030 · ROUTE IT</div><h1>صمّمي قاعدة التوجيه</h1><div class="muted">محاكاة تصميم الأتمتة في شركة المستقبل للخدمات الإدارية والتقنية</div></div>
-<section id="welcome" class="panel intro"><h2>أنتِ تصمّمين المسار… والنظام ينفّذه</h2><p>اضبطي أربع قواعد من سياسة الشركة، ثم شغّلي المحاكاة على ست معاملات. راقبي المراحل وتعرّفي على موضع الخلل، ثم عدّلي القواعد وأعيدي التشغيل.</p><p class="muted">90 ثانية للتصميم · 3 محاولات · نتيجة من 6</p><button class="primary" id="start">ابدئي تصميم المسار</button></section>
-<section id="design" class="hidden"><div class="cols"><article class="panel"><h2>سياسة الشركة المعتمدة</h2><ol class="policy"><li>التدريب ← وحدة التدريب؛ التقنية ← تقنية المعلومات؛ المرافق ← المرافق؛ شراء الخدمات ← الشؤون الإدارية.</li><li>أي التزام مالي يتجاوز <b>1,000 ريال</b> يمر بالمراجعة المالية.</li><li>كل طلب فيه تكلفة يحتاج اعتماد صاحبة الصلاحية؛ والطلبات الداخلية بلا تكلفة تُعتمد آليًا.</li><li>إذا تجاوز عمر الطلب <b>72 ساعة</b> دون إنجاز يُرسل تنبيه وتصعيد.</li></ol></article><article class="panel"><h2>لوحة تصميم القواعد</h2><div id="rules"></div></article></div><div class="toolbar"><div class="clock">⏱ <span id="clock">90</span> ثانية</div><span id="attempts" class="muted">المحاولة 1 من 3</span><button id="run" class="primary">شغّلي القواعد</button></div></section>
-<section id="results" class="hidden"><article class="panel"><div class="cardtop"><h2 id="heading">نتيجة تشغيل القواعد</h2><div class="score" id="score"></div></div><div class="bar"><div id="bar"></div></div><p class="muted">المراحل المحددة بالأحمر تخالف سياسة الشركة.</p><div id="cases"></div><div class="toolbar"><span id="message" class="muted"></span><div class="choices"><button id="retry">عدّلي القواعد وأعيدي التشغيل</button><button id="restart">ابدئي من جديد</button><button id="solution" class="hidden">اعرضي الإعداد الصحيح</button></div></div></article></section><div class="foot">نموذج تدريبي ببيانات وهمية · OFFICE TECH 2030</div></main>
+
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WORKFLOW RESCUE 2030</title>
+<style>
+:root{--a:#00d6c6;--b:#00e5ff;--bg:#050b13;--good:#3ee07f;--bad:#ff5c7a}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(circle at 85% 0%,#064448,transparent 45%),#050b13;color:#f2faff;font-family:Tahoma,Arial,sans-serif;line-height:1.8}
+main{max-width:1050px;margin:auto;padding:22px}
+header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #22565e;padding-bottom:16px;gap:15px}
+.logos{display:flex;gap:12px}
+.logos img{width:72px;height:65px;object-fit:contain}
+small,.muted{color:#a8b5cc}
+h1{font-size:clamp(26px,5vw,45px);margin:10px 0;color:#fff}
+h2{color:#7ff9ef}
+.card{background:#ffffff09;border:1px solid #00d6c655;border-radius:18px;padding:22px;margin:15px 0}
+button{font:inherit;cursor:pointer;border:1px solid #37616b;background:#132633;color:white;padding:12px 17px;border-radius:12px;min-height:48px;text-align:right}
+button:hover{border-color:var(--a)}
+.primary{background:linear-gradient(110deg,var(--a),var(--b));color:#05232b;font-weight:bold;border:0}
+.options{display:grid;gap:10px;margin:15px 0}
+.selected{border:2px solid var(--a);background:#064447}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.metric{background:#10232b;padding:14px;border-radius:12px}
+.metric strong{display:block;color:#9bf9f0}
+.badge{display:inline-block;border:1px solid var(--a);color:var(--a);border-radius:25px;padding:3px 12px}
+.timeline{border-right:2px solid #00d6c6;padding-right:15px;margin:16px 0}
+.timeline div{margin:9px 0}
+.feedback{padding:16px;border-radius:12px;background:#10252c;margin:15px 0}
+.good{border:1px solid var(--good)}
+.bad{border:1px solid var(--bad)}
+.progress{height:9px;background:#24323d;border-radius:12px;overflow:hidden}
+.progress div{height:100%;background:var(--a);transition:width .3s}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.hidden{display:none}
+footer{text-align:center;color:#9aaabb;font-size:12px;margin:35px 0}
+@media(max-width:650px){.grid{grid-template-columns:1fr}main{padding:12px}.card{padding:15px}.logos img{width:55px}}
+</style>
+</head>
+<body>
+<main>
+<header>
+<div class="logos">
+<img src="deanship.png" alt="شعار العمادة">
+<img src="club.png" alt="شعار النادي">
+</div>
+<small dir="ltr">OFFICE TECH 2030 · ZONE 03 / 06</small>
+</header>
+
+<h1>WORKFLOW RESCUE 2030</h1>
+<p class="muted">غرفة إنقاذ المعاملات | تدخّلي في الوقت المناسب</p>
+<div id="app"></div>
+<footer>نموذج تدريبي ببيانات وهمية · OFFICE TECH 2030</footer>
+</main>
+
 <script>
-const deps=['وحدة التدريب','تقنية المعلومات','المرافق','الشؤون الإدارية','الشؤون المالية'],types=['تدريب','تقنية','مرافق','شراء خدمات'],right=[0,1,2,3];
-const cases=[['2030-041','تنظيم ورشة مهارات العمل الرقمي',0,4500,26],['M-2030-08','حجز غرفة الابتكار 3',2,0,1],['2030-040','ترخيص منصة التعلم',3,13800,144],['صيانة','صيانة شاشة في قاعة الأفق',2,800,30],['حساب منصة','حساب منصة لموظفة جديدة',1,0,80],['مواد تدريبية','مواد تدريبية للورشة',0,700,5]];
-let state,sec=90,attempt=1,timer,done=false;const $=id=>document.getElementById(id);
-function init(){state={dep:[null,null,null,null],money:null,approve:null,alert:null};sec=90;attempt=1;done=false;$('welcome').classList.add('hidden');$('results').classList.add('hidden');$('design').classList.remove('hidden');render();clock()}
-function clock(){clearInterval(timer);timer=setInterval(()=>{if($('design').classList.contains('hidden'))return;sec=Math.max(0,sec-1);$('clock').textContent=sec;if(!sec){clearInterval(timer);simulate(true)}},1000)}
-function rule(title,items,current,set){let block=document.createElement('div');block.className='rule';let label=document.createElement('b');label.textContent=title;block.append(label);let row=document.createElement('div');row.className='choices';items.forEach((name,i)=>{let b=document.createElement('button');b.textContent=name;if(i===current)b.className='selected';b.onclick=()=>{set(i);render()};row.append(b)});block.append(row);$('rules').append(block)}
-function render(){$('rules').innerHTML='';types.forEach((t,i)=>rule('1 · توجيه '+t,deps,state.dep[i],v=>state.dep[i]=v));rule('2 · المراجعة المالية: أضيفي مراجعة إذا تجاوز المبلغ',['0 ريال','1,000 ريال','10,000 ريال','لا تضيفي أبدًا'],state.money,v=>state.money=v);rule('3 · الاعتماد',['بشري لكل الطلبات','بشري للطلبات ذات التكلفة فقط (والباقي آلي)','آلي لكل الطلبات'],state.approve,v=>state.approve=v);rule('4 · التنبيه والتصعيد',['بعد 24 ساعة','بعد 72 ساعة','بدون تنبيه'],state.alert,v=>state.alert=v);$('clock').textContent=sec;$('attempts').textContent='المحاولة '+attempt+' من 3'}
-function evaluate(c){let [id,name,type,cost,age]=c,issues=[],steps=[['تقديم الطلب',false]];let dep=state.dep[type];steps.push([dep===null?'جهة غير محددة':deps[dep],dep!==right[type]]);if(dep!==right[type])issues.push('التوجيه إلى جهة غير مختصة أو غير محددة يسبب إحالة يدوية وتأخيرًا.');let finance=state.money===null?null:state.money===3?false:cost>[0,1000,10000][state.money],needFinance=cost>1000;if(finance)steps.push(['مراجعة مالية',!needFinance]);if(finance!==needFinance){issues.push(finance===null?'قاعدة المراجعة المالية غير محددة.':needFinance?'مراجعة مالية مطلوبة لمبلغ يتجاوز 1,000 ريال ولم تُنفذ.':'أُضيفت مراجعة مالية لمبلغ لا يتجاوز 1,000 ريال؛ انتظار غير مطلوب.');if(!finance)steps.push(['مراجعة مالية مفقودة',true])}let human=state.approve===null?null:state.approve===0?true:state.approve===1?cost>0:false,needHuman=cost>0;steps.push([human===null?'اعتماد غير محدد':human?'اعتماد بشري':'اعتماد آلي',human!==needHuman]);if(human!==needHuman)issues.push(human===null?'قاعدة الاعتماد غير محددة.':needHuman?'التزام مالي اعتمد آليًا دون صاحبة الصلاحية.':'طلب بلا تكلفة ينتظر اعتمادًا بشريًا غير مطلوب.');let alert=state.alert===null?null:state.alert===2?false:age>[24,72][state.alert],needAlert=age>72;if(alert)steps.push(['تنبيه وتصعيد',!needAlert]);if(alert!==needAlert){issues.push(alert===null?'قاعدة التنبيه غير محددة.':needAlert?'الطلب تجاوز 72 ساعة ولم يصدر تنبيه وتصعيد.':'تنبيه مبكر قبل المهلة المعتمدة.');if(!alert)steps.push(['تنبيه مفقود',true])}steps.push(['تنفيذ',false]);return{ok:!issues.length,issues,steps}}
-function simulate(expired=false){clearInterval(timer);$('design').classList.add('hidden');$('results').classList.remove('hidden');let evaluations=cases.map(evaluate),score=evaluations.filter(x=>x.ok).length;$('score').textContent=score+' / 6';$('bar').style.width=(score/6*100)+'%';$('heading').textContent='نتيجة تشغيل القواعد · المحاولة '+attempt;$('cases').innerHTML='';cases.forEach((c,i)=>{let e=evaluations[i],box=document.createElement('div');box.className='card '+(e.ok?'good':'bad');let h=document.createElement('div');h.className='cardtop';let title=document.createElement('h3');title.textContent=c[0]+' · '+c[1];let tag=document.createElement('strong');tag.textContent=e.ok?'✓ مطابق للسياسة':'✕ يحتاج تعديلًا';h.append(title,tag);box.append(h);let meta=document.createElement('div');meta.className='muted';meta.textContent=types[c[2]]+' · '+c[3].toLocaleString('en-US')+' ريال · عمر الطلب '+c[4]+' ساعة';box.append(meta);let f=document.createElement('div');f.className='flow';e.steps.forEach((step,j)=>{if(j){let a=document.createElement('span');a.className='arrow';a.textContent='←';f.append(a)}let n=document.createElement('span');n.className='node'+(step[1]?' bad':'');n.textContent=step[0];f.append(n)});box.append(f);let reason=document.createElement('div');reason.className='reason';reason.textContent=e.ok?'كل المراحل مطابقة للسياسة.':e.issues.join(' • ');box.append(reason);$('cases').append(box)});done=score===6||attempt>=3||sec===0;$('retry').classList.toggle('hidden',done);$('solution').classList.toggle('hidden',!done||score===6);$('message').textContent=score===6?'أحسنتِ! استحققتِ ختم الركن. التقنية تؤتمت الإجراءات… والإنسان يصمم المسار.':expired?'انتهى وقت التصميم. راجعي المسارات وتفسيراتها.':'راجعي المراحل الحمراء وعدّلي القواعد.'}
-$('start').onclick=init;$('run').onclick=()=>simulate(false);$('retry').onclick=()=>{if(done)return;attempt++;$('results').classList.add('hidden');$('design').classList.remove('hidden');render();clock()};$('restart').onclick=init;$('solution').onclick=()=>{let old=document.getElementById('answerKey');if(old){old.remove();return}let p=document.createElement('div');p.id='answerKey';p.className='card good';p.textContent='الإعداد الصحيح: التدريب ← وحدة التدريب؛ التقنية ← تقنية المعلومات؛ المرافق ← المرافق؛ شراء الخدمات ← الشؤون الإدارية. مراجعة مالية فوق 1,000 ريال. اعتماد بشري للطلبات ذات التكلفة فقط، والباقي آلي. تنبيه وتصعيد بعد تجاوز 72 ساعة.';$('cases').prepend(p)};
-</script></body></html>
+const cases=[
+{
+title:"ملف الورشة غير مكتمل",
+id:"2030-041",
+type:"بيانات ناقصة",
+facts:[
+["نوع الطلب","تنظيم ورشة تدريبية"],
+["الحالة","بانتظار التحقق"],
+["البيانات","اسم المدربة غير مكتمل"]
+],
+log:[
+"استلم النظام طلب تنظيم الورشة.",
+"تحققت المنصة من البيانات الأساسية.",
+"توقف التحقق بسبب نقص اسم المدربة."
+],
+question:"ما سبب تعثر المعاملة؟",
+causes:[
+"نقص بيانات المدربة",
+"تأخر الاعتماد المالي",
+"وجود مشكلة في القاعة"
+],
+correctCause:0,
+action:"كيف تعالجين المشكلة؟",
+actions:[
+"طلب استكمال اسم المدربة من وحدة التدريب",
+"إرسال الطلب مباشرة إلى التنفيذ",
+"إلغاء المعاملة وفتح طلب جديد"
+],
+correctAction:0,
+why:"يجب استكمال البيانات الناقصة من وحدة التدريب قبل متابعة إجراءات المعاملة.",
+tip:"راجعي اكتمال الحقول الأساسية قبل إحالة المعاملة."
+},
+{
+title:"طلب تقني في القسم الخطأ",
+id:"IT-2030-02",
+type:"توجيه خاطئ",
+facts:[
+["نوع الطلب","إنشاء حسابات المشاركات"],
+["الجهة الحالية","وحدة المرافق"],
+["الجهة المختصة","تقنية المعلومات"]
+],
+log:[
+"وصل طلب إنشاء الحسابات إلى النظام.",
+"وُجّه الطلب إلى وحدة المرافق.",
+"توقف التنفيذ لعدم اختصاص الجهة."
+],
+question:"أين حدث الخلل؟",
+causes:[
+"عدم اعتماد الميزانية",
+"توجيه الطلب إلى جهة غير مختصة",
+"انتهاء مهلة إنشاء الحسابات"
+],
+correctCause:1,
+action:"إلى أي جهة تعيدين توجيه الطلب؟",
+actions:[
+"الشؤون المالية",
+"وحدة التدريب",
+"تقنية المعلومات مع تسجيل سبب التصحيح"
+],
+correctAction:2,
+why:"إنشاء الحسابات مهمة تقنية، ويجب توجيهها إلى تقنية المعلومات مع توثيق سبب إعادة التوجيه.",
+tip:"قارني نوع الخدمة باختصاص الجهة قبل إعادة التوجيه."
+},
+{
+title:"ترخيص المنصة متوقف",
+id:"2030-040",
+type:"تجاوز المهلة",
+facts:[
+["التكلفة","13,800 ريال"],
+["عمر الطلب","144 ساعة"],
+["الحالة","بانتظار اعتماد صاحبة الصلاحية"]
+],
+log:[
+"استلمت الشؤون الإدارية طلب الترخيص.",
+"اكتملت المراجعة المالية.",
+"توقف الطلب عند الاعتماد البشري.",
+"تجاوز عمر المعاملة 72 ساعة."
+],
+question:"ما السبب الرئيسي للتعثر؟",
+causes:[
+"عدم وجود عرض سعر",
+"تأخر الاعتماد البشري بعد اكتمال المراجعة",
+"عدم اختصاص الشؤون الإدارية"
+],
+correctCause:1,
+action:"ما الإجراء الصحيح الآن؟",
+actions:[
+"اعتماد الترخيص نيابة عن المسؤولة",
+"إلغاء المراجعة المالية",
+"تصعيد التأخير إلى صاحبة الصلاحية وتوثيقه"
+],
+correctAction:2,
+why:"تجاوز الطلب المهلة المعتمدة، لذلك يلزم التصعيد والتوثيق دون تجاوز صلاحية الاعتماد.",
+tip:"التصعيد لا يعني منح نفسك صلاحية اتخاذ القرار."
+},
+{
+title:"صيانة اعتُمدت آليًا",
+id:"MAINT-2030-04",
+type:"تجاوز صلاحية",
+facts:[
+["نوع الطلب","صيانة شاشة"],
+["التكلفة","800 ريال"],
+["الاعتماد","آلي"]
+],
+log:[
+"وصل طلب الصيانة إلى المرافق.",
+"حدد النظام تكلفة قدرها 800 ريال.",
+"منح النظام اعتمادًا آليًا.",
+"أصبح الطلب جاهزًا للتنفيذ."
+],
+question:"ما المخالفة في هذا المسار؟",
+causes:[
+"عدم وجود مراجعة مالية",
+"اعتماد طلب ذي تكلفة دون اعتماد بشري",
+"توجيه الطلب إلى المرافق"
+],
+correctCause:1,
+action:"كيف تصححين الإجراء؟",
+actions:[
+"تعليق التنفيذ وإحالة الطلب للاعتماد البشري",
+"إضافة مراجعة مالية إلزامية",
+"اعتماد التنفيذ لأن التكلفة أقل من 1,000 ريال"
+],
+correctAction:0,
+why:"كل طلب يتضمن تكلفة يحتاج اعتمادًا بشريًا. أما المراجعة المالية فلا تلزم هنا لأن المبلغ لا يتجاوز 1,000 ريال.",
+tip:"ميّزي بين شرط المراجعة المالية وشرط الاعتماد."
+},
+{
+title:"حجز غرفة ينتظر توقيعًا",
+id:"M-2030-08",
+type:"انتظار غير ضروري",
+facts:[
+["نوع الطلب","حجز غرفة داخلية"],
+["التكلفة","0 ريال"],
+["الحالة","بانتظار توقيع بشري"]
+],
+log:[
+"استلم النظام طلب الحجز.",
+"تحقق من اكتمال البيانات وتوفر الغرفة.",
+"أرسل الطلب لاعتماد بشري.",
+"توقف الحجز في قائمة الانتظار."
+],
+question:"لماذا تعطلت المعاملة؟",
+causes:[
+"إضافة اعتماد بشري لا تتطلبه السياسة",
+"نقص بيانات الحجز",
+"تجاوز مهلة 72 ساعة"
+],
+correctCause:0,
+action:"كيف تعيدين المعاملة إلى مسارها؟",
+actions:[
+"إلغاء الحجز",
+"تطبيق الاعتماد الآلي وفق السياسة واستكمال الحجز",
+"إرسال الحجز إلى المراجعة المالية"
+],
+correctAction:1,
+why:"الطلب داخلي وبلا تكلفة وبياناته مكتملة، لذلك يُعتمد آليًا وفق سياسة الشركة.",
+tip:"لا تضيفي مراحل اعتماد لا تتطلبها السياسة."
+}
+];
+
+let index=0,score=0,phase="welcome",cause=null,action=null;
+let history=[];
+const app=document.getElementById("app");
+
+function btn(label,fn,cls=""){
+let b=document.createElement("button");
+b.textContent=label;
+b.className=cls;
+b.onclick=fn;
+return b;
+}
+function el(tag,cls="",content=""){
+let x=document.createElement(tag);
+x.className=cls;
+x.textContent=content;
+return x;
+}
+function reset(){
+index=0;score=0;phase="case";
+cause=null;action=null;history=[];
+render();
+}
+function render(){
+app.innerHTML="";
+if(phase==="welcome")return welcome();
+if(phase==="case")return showCase();
+if(phase==="cause")return showCause();
+if(phase==="action")return showAction();
+if(phase==="feedback")return showFeedback();
+if(phase==="end")return showEnd();
+}
+function welcome(){
+let c=el("section","card");
+c.append(
+el("span","badge","5 معاملات تحتاج إلى الإنقاذ"),
+el("h2","","أنتِ مسؤولة معالجة التعثرات"),
+el("p","","تواجه شركة المستقبل خمس معاملات متعثرة. افتحي بيانات كل معاملة، راجعي سجلها، حددي سبب المشكلة، ثم نفّذي الإجراء الإداري الصحيح."),
+el("p","muted","لكل حالة نقطة واحدة عند صحة التشخيص والإجراء معًا. يمكنكِ مراجعة الإجابات في النهاية.")
+);
+c.append(btn("ابدئي مهمة الإنقاذ ←",reset,"primary"));
+app.append(c);
+}
+function progress(){
+let p=el("div","progress");
+let bar=el("div");
+bar.style.width=(index/5*100)+"%";
+p.append(bar);
+app.append(el("p","muted","المعاملة "+(index+1)+" من 5"));
+app.append(p);
+}
+function showCase(){
+progress();
+let d=cases[index],c=el("section","card");
+c.append(el("span","badge",d.type),el("h2","",d.title),
+el("p","muted","رقم المعاملة: "+d.id));
+let grid=el("div","grid");
+d.facts.forEach(f=>{
+let box=el("div","metric");
+box.append(el("small","",f[0]),el("strong","",f[1]));
+grid.append(box);
+});
+c.append(grid,el("h3","","سجل تتبع المعاملة"));
+let timeline=el("div","timeline");
+d.log.forEach((x,i)=>timeline.append(el("div","",(i+1)+" · "+x)));
+c.append(timeline);
+c.append(btn("حلّلي سبب التعثر ←",()=>{phase="cause";render()},"primary"));
+app.append(c);
+}
+function choices(options,selected,choose){
+let box=el("div","options");
+options.forEach((x,i)=>{
+let b=btn(x,()=>{choose(i);render()},i===selected?"selected":"");
+box.append(b);
+});
+return box;
+}
+function showCause(){
+progress();
+let d=cases[index],c=el("section","card");
+c.append(el("span","badge","الخطوة 1 · التشخيص"),
+el("h2","",d.title),el("h3","",d.question));
+c.append(choices(d.causes,cause,i=>cause=i));
+if(cause!==null)c.append(btn("انتقلي إلى معالجة المشكلة ←",
+()=>{phase="action";render()},"primary"));
+app.append(c);
+}
+function showAction(){
+progress();
+let d=cases[index],c=el("section","card");
+c.append(el("span","badge","الخطوة 2 · التدخل الإداري"),
+el("h2","",d.title),el("h3","",d.action));
+c.append(choices(d.actions,action,i=>action=i));
+let row=el("div","actions");
+row.append(btn("رجوع للتشخيص",()=>{phase="cause";render()}));
+if(action!==null)row.append(btn("نفّذي الإجراء ←",()=>{
+let correct=cause===d.correctCause&&action===d.correctAction;
+if(correct)score++;
+history.push({correct,cause,action});
+phase="feedback";render();
+},"primary"));
+c.append(row);app.append(c);
+}
+function showFeedback(){
+let d=cases[index],h=history[index];
+let c=el("section","card");
+c.append(el("h2","",h.correct?"تم إنقاذ المعاملة بنجاح!":"المعاملة تحتاج إلى تصحيح"));
+let f=el("div","feedback "+(h.correct?"good":"bad"));
+f.append(el("strong","",h.correct?"قرار مهني صحيح":"راجعي قرارك"));
+f.append(el("p","",d.why));
+if(!h.correct){
+if(h.cause!==d.correctCause)
+f.append(el("p","","التشخيص الصحيح: "+d.causes[d.correctCause]));
+if(h.action!==d.correctAction)
+f.append(el("p","","الإجراء الصحيح: "+d.actions[d.correctAction]));
+}
+c.append(f);
+c.append(el("p","muted","نتيجتك الحالية: "+score+" من "+(index+1)));
+c.append(btn(index===4?"عرض تقييمي النهائي ←":"المعاملة التالية ←",()=>{
+index++;
+cause=null;action=null;
+phase=index===5?"end":"case";
+render();
+},"primary"));
+app.append(c);
+}
+function showEnd(){
+let levels=[
+["مستكشفة الأنظمة","WORKFLOW EXPLORER",
+"تحتاجين إلى التمهّل في مراجعة بيانات المعاملة وسياساتها."],
+["محللة المعاملات","WORKFLOW ANALYST",
+"لديكِ أساس جيد، لكن بعض قراراتكِ تحتاج إلى تحقق إضافي."],
+["خبيرة إنقاذ المعاملات","WORKFLOW RESCUE EXPERT",
+"أظهرتِ قدرة قوية على معالجة التعثرات مع احترام الضوابط."],
+["مهندسة سير العمل","WORKFLOW ARCHITECT",
+"نجحتِ في جميع الحالات ووازنتِ بين سرعة الإنجاز وسلامة الإجراءات."]
+];
+let level=score===5?levels[3]:score===4?levels[2]:score>=2?levels[1]:levels[0];
+let c=el("section","card");
+c.append(el("span","badge","YOUR WORKFLOW DNA"),
+el("h2","","بصمتكِ في إدارة المعاملات"),
+el("h1","",score+" / 5"),
+el("small","",level[1]),
+el("h2","",level[0]),
+el("p","",level[2]));
+let mistakes=history.map((x,i)=>({x,i})).filter(z=>!z.x.correct);
+if(mistakes.length){
+c.append(el("h3","","مهارات يمكنكِ تطويرها"));
+mistakes.forEach(z=>{
+let box=el("div","feedback");
+box.append(el("strong","",cases[z.i].title),
+el("p","",cases[z.i].tip));
+c.append(box);
+});
+}else{
+c.append(el("div","feedback good",
+"خطوتكِ التالية: تعلّمي كيف تمنعين التعثرات قبل وقوعها من خلال تحسين تصميم الإجراءات."));
+}
+c.append(el("h3","",score>=4?
+"استحققتِ ختم الركن الثالث!":
+"أعيدي التحدي وحسّني مستواكِ"));
+c.append(btn("أعيدي التحدي وحسّني مستواكِ",reset,"primary"));
+app.append(c);
+}
+render();
+</script>
+</body>
+</html>
